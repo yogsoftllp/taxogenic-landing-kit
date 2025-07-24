@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxoGenic - Professional Income Tax Filing Services in Delhi</title>
+    <meta name="description" content="Expert Income Tax Filing Services in Delhi. Quick, Accurate & Affordable ITR Filing. Get maximum refund with our certified tax experts. Call +91 9220234972">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0052cc;
+            --primary-dark: #003d96;
+            --secondary: #16a34a;
+            --accent: #f59e0b;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border: #e2e8f0;
+            --whatsapp: #25d366;
+            --gradient-primary: linear-gradient(135deg, #0052cc 0%, #003d96 100%);
+            --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .call-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .call-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-hero);
+            color: white;
+            padding: 140px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 24px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            margin-bottom: 48px;
+            opacity: 0.95;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #15803d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--whatsapp);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: #20b55a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 80px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 48px 40px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 120px 0;
+            background: var(--bg-white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            margin-top: 80px;
+        }
+
+        .pricing-card {
+            background: var(--bg-white);
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 100%);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .plan-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 32px;
+            line-height: 1;
+        }
+
+        .plan-price .currency {
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-features i {
+            color: var(--secondary);
+            font-size: 16px;
+            width: 16px;
+        }
+
+        .plan-btn {
+            width: 100%;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .plan-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            margin-top: 80px;
+        }
+
+        .contact-item {
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .contact-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .contact-item p {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 80px 0 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 24px;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp);
+            color: white;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .header-content {
+                padding: 16px 0;
+            }
+            
+            .logo {
+                font-size: 28px;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .feature-card {
+                padding: 32px 24px;
+            }
+            
+            .pricing-card {
+                padding: 32px 24px;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 56px;
+                height: 56px;
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">TaxoGenic</a>
+                <nav>
+                    <ul>
+                        <li><a href="https://www.taxogenic.com/">Home</a></li>
+                        <li><a href="https://www.taxogenic.com/about-us/">About Us</a></li>
+                        <li><a href="https://www.taxogenic.com/income-tax/">Income Tax Filing</a></li>
+                        <li><a href="https://www.taxogenic.com/services/">Services</a></li>
+                        <li><a href="https://www.taxogenic.com/contact-us/">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <a href="tel:+919220234972" class="call-btn">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Expert Income Tax Filing Services in Delhi</h1>
+                <p class="hero-subtitle">Get maximum refund with our certified tax experts. Quick, accurate & affordable ITR filing with guaranteed compliance and professional support.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919220234972" class="btn-primary">
+                        <i class="fas fa-phone"></i> Call Now +91 9220234972
+                    </a>
+                    <a href="https://wa.me/919220234972?text=Hi, I need help with Income Tax Filing" class="btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5000+</span>
+                        <span class="stat-label">Tax Returns Filed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24hrs</span>
+                        <span class="stat-label">Quick Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose TaxoGenic?</h2>
+            <p class="section-subtitle">Professional tax filing services with expert guidance and guaranteed accuracy</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-certificate feature-icon"></i>
+                    <h3>Certified Tax Experts</h3>
+                    <p>Our team of qualified chartered accountants and tax professionals ensure accurate filing with maximum deductions and refunds.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-clock feature-icon"></i>
+                    <h3>Quick 24-Hour Processing</h3>
+                    <p>Fast and efficient ITR filing service with document verification and submission within 24 hours of receiving your documents.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>100% Data Security</h3>
+                    <p>Your financial information is completely secure with us. We use bank-grade encryption and follow strict confidentiality protocols.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-rupee-sign feature-icon"></i>
+                    <h3>Maximum Refund Guarantee</h3>
+                    <p>We ensure you get the maximum possible refund by claiming all eligible deductions and exemptions under the Income Tax Act.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>Dedicated Support</h3>
+                    <p>Get personalized assistance from our tax experts via phone, WhatsApp, or email throughout the entire filing process.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-file-check feature-icon"></i>
+                    <h3>Error-Free Filing</h3>
+                    <p>Multiple quality checks ensure your ITR is filed without errors, reducing the chances of notices from the Income Tax Department.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Affordable Pricing Plans</h2>
+            <p class="section-subtitle">Choose the plan that best fits your tax filing needs</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Basic Plan</h3>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>999
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> ITR-1 (Salary Income)</li>
+                        <li><i class="fas fa-check"></i> Basic Deductions</li>
+                        <li><i class="fas fa-check"></i> Email Support</li>
+                        <li><i class="fas fa-check"></i> 24-Hour Processing</li>
+                        <li><i class="fas fa-check"></i> Error-Free Filing</li>
+                    </ul>
+                    <a href="tel:+919220234972" class="plan-btn">Call Now to Book</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3 class="plan-name">Professional Plan</h3>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>1,999
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> ITR-2/3 (Multiple Sources)</li>
+                        <li><i class="fas fa-check"></i> Capital Gains Calculation</li>
+                        <li><i class="fas fa-check"></i> House Property Income</li>
+                        <li><i class="fas fa-check"></i> Priority Phone Support</li>
+                        <li><i class="fas fa-check"></i> Tax Planning Advice</li>
+                        <li><i class="fas fa-check"></i> Previous Year Corrections</li>
+                    </ul>
+                    <a href="https://wa.me/919220234972?text=Hi, I want to book Professional Plan for ITR filing" class="plan-btn">WhatsApp to Book</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 class="plan-name">Business Plan</h3>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>4,999
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> ITR-3/4 (Business Income)</li>
+                        <li><i class="fas fa-check"></i> Business P&L Preparation</li>
+                        <li><i class="fas fa-check"></i> GST Return Filing</li>
+                        <li><i class="fas fa-check"></i> Dedicated CA Support</li>
+                        <li><i class="fas fa-check"></i> Audit Assistance</li>
+                        <li><i class="fas fa-check"></i> Year-Round Tax Support</li>
+                    </ul>
+                    <a href="tel:+919220234972" class="plan-btn">Call for Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Ready to file your income tax return? Contact our experts now</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <h3>Call Us Now</h3>
+                    <p>Speak directly with our tax experts<br><strong>+91 9220234972</strong></p>
+                    <a href="tel:+919220234972" class="btn-primary" style="margin-top: 20px;">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp contact-icon"></i>
+                    <h3>WhatsApp Chat</h3>
+                    <p>Quick support via WhatsApp<br><strong>+91 9220234972</strong></p>
+                    <a href="https://wa.me/919220234972?text=Hi, I need help with Income Tax Filing" class="btn-secondary" style="margin-top: 20px;">
+                        <i class="fab fa-whatsapp"></i> Start Chat
+                    </a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <h3>Visit Our Office</h3>
+                    <p>Professional tax consultancy in Delhi<br><strong>Schedule an appointment</strong></p>
+                    <a href="tel:+919220234972" class="btn-primary" style="margin-top: 20px;">
+                        <i class="fas fa-calendar"></i> Book Meeting
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TaxoGenic</h3>
+                    <p>Professional Income Tax Filing Services in Delhi. Expert guidance for maximum refunds and hassle-free tax compliance.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="tel:+919220234972" style="color: #25d366; font-weight: 600;">
+                            <i class="fas fa-phone"></i> +91 9220234972
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://www.taxogenic.com/">Home</a></li>
+                        <li><a href="https://www.taxogenic.com/about-us/">About Us</a></li>
+                        <li><a href="https://www.taxogenic.com/services/">Our Services</a></li>
+                        <li><a href="https://www.taxogenic.com/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="https://www.taxogenic.com/income-tax/">Income Tax Filing</a></li>
+                        <li><a href="#pricing">ITR-1 Filing</a></li>
+                        <li><a href="#pricing">ITR-2/3 Filing</a></li>
+                        <li><a href="#pricing">Business Tax Filing</a></li>
+                        <li><a href="#pricing">Tax Planning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 9220234972</li>
+                        <li><i class="fas fa-envelope"></i> info@taxogenic.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Delhi, India</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Support</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TaxoGenic. All rights reserved. | Professional Income Tax Filing Services in Delhi</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919220234972?text=Hi, I need help with Income Tax Filing" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.feature-card, .pricing-card, .contact-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
